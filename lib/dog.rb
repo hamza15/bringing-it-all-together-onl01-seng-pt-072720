@@ -46,4 +46,11 @@ class Dog
     dog
   end
   
+  def self.new_from_db
+    sql = <<-SQL
+        SELECT * dogs (name, breed)
+        
+      SQL
+  end
+  
 end
