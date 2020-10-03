@@ -10,7 +10,7 @@ class Dog
   
   def self.create_table
     sql = <<-SQL
-      CREATE TABLE IF NO EXIST dogs 
+      CREATE TABLE IF NOT EXISTS dogs 
     
     SQL
   end
