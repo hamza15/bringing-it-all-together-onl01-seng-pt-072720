@@ -28,13 +28,10 @@ class Dog
   
   def save
     sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS dogs 
-      (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        breed TEXT)
+      INSERT INTO songs (name, breed)
+      VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, self.name, self.breed)
     
   end
   
